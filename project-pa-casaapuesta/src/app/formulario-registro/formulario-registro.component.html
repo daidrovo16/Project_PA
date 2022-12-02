@@ -126,7 +126,22 @@
 
   </div>
 
-  <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin: 9px; width: 30%; height: 50px;" >Registrar</button>
+          <!--Formulario Modal Comprobante Registro-->
+          <div class="modal fade " id="contenedor-modal" tabindex="2" >
+            <div class="modal-dialog modal-dialog-centered " style="width: 70%; max-width: 50%;;text-align:center;">
+              <!--<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width: 70%; max-width: 50%;;text-align:center;">-->
+              <div class="modal-content" >
+                <div class="modal-head" >
+                  <h2 style="color:black;padding: 5px; text-align:center;">Abrir un Cuenta</h2>
+                  <app-comprobante-registro></app-comprobante-registro>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contenedor-modal" style="margin-top: 10px; margin: 9px; width: 30%; height: 50px;">Comprobante</button>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px; margin: 9px; width: 30%; height: 50px;">Registrar</button>
 
 
 
