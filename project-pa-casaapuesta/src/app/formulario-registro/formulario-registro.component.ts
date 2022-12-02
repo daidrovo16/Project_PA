@@ -27,7 +27,7 @@ export class FormularioRegistroComponent implements OnInit {
       this.viewModal = true;
     }
   }
-  
+
   ngOnInit(): void {
   }
 
