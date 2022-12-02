@@ -8,6 +8,11 @@ import { ComprobanteRegistroComponent } from './comprobante-registro/comprobante
 
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { MenuComponent } from './menu/menu.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { PrinDerechoComponent } from './prin-derecho/prin-derecho.component';
+import { PrinIzquierdoComponent } from './prin-izquierdo/prin-izquierdo.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContenidoComponent } from './contenido/contenido.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -18,7 +23,12 @@ import { FormsModule } from '@angular/forms';
     FormularioRegistroComponent,
     ComprobanteRegistroComponent,
     PaginaprincipalComponent,
-    MenuComponent
+    MenuComponent,
+    CarouselComponent,
+    PrinDerechoComponent,
+    PrinIzquierdoComponent,
+    FooterComponent,
+    ContenidoComponent
   ],
   imports: [
     BrowserModule,
