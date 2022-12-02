@@ -27,12 +27,19 @@
           <a class="nav-link " href="#" >RESULTADOS</a>
         </li>
       </ul>
+
       <ul class="navbar-nav p-2 d-flex justify-content-end">
         <li class="nav-item">
-          <a class="nav-link " href="#" >REGISTRARSE</a>
+          <a class="nav-link " >REGISTRARSE</a>
         </li>
+        <!--Formulario Modal-->
+        <div class="modal fade " id="contenedor-modal">
+          <div class="modal-dialog modal-dialog-centered " style="width: 90%; max-width: 20%; align-items:center;">
+             <app-login></app-login>
+          </div>
+        </div>
         <li class="nav-item">
-          <a class="nav-link " href="#" >INICIAR SESIÓN</a>
+          <a class="nav-link" data-bs-target="#contenedor-modal" data-bs-toggle="modal">INICIAR SESIÓN</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

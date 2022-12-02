@@ -1,0 +1,8 @@
+<div class="login">
+  <form class="custom-form" [formGroup]="form" (ngSubmit)="save($event)">
+    <h1>Login</h1>
+    <input type="email" formControlName="username" [(ngModel)]="login.username_log" placeholder="Email" required="required"/>
+    <input type="password" formControlName="password" [(ngModel)]="login.password_log" placeholder="Password" required="required"/>
+    <button type="submit" class="btn btn-outline-primary" (click)="Agregar()">Log in</button>
+  </form>
+</div>
