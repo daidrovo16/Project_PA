@@ -18,8 +18,6 @@ export class FormularioRegistroComponent implements OnInit {
     this.modalSS.$modal.emit(false);
   }
 
-  ngOnInit(): void {
-  }
 
    //Mostrar - Ocultar componente
    showhide(){
@@ -28,6 +26,9 @@ export class FormularioRegistroComponent implements OnInit {
     }else{
       this.viewModal = true;
     }
+  }
+  
+  ngOnInit(): void {
   }
 
 }
