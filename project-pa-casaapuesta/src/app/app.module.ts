@@ -12,6 +12,7 @@ import { PrinIzquierdoComponent } from "./prin-izquierdo/prin-izquierdo.componen
 import { CarouselComponent } from "./carousel/carousel.component";
 import { PrinDerechoComponent } from "./prin-derecho/prin-derecho.component";
 import { FooterComponent } from "./footer/footer.component";
+import { ContenidoComponent } from "./contenido/contenido.component";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,13 @@ import { FooterComponent } from "./footer/footer.component";
         FormularioRegistroComponent,
         ComprobanteRegistroComponent,
         PaginaprincipalComponent,
-        MenuComponent
+        MenuComponent,
+        PrinIzquierdoComponent,
+        CarouselComponent,
+        PrinDerechoComponent,
+        FooterComponent,
+        ContenidoComponent
+
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -28,10 +35,6 @@ import { FooterComponent } from "./footer/footer.component";
         AppRoutingModule,
         ReactiveFormsModule,
         FormsModule,
-        PrinIzquierdoComponent,
-        CarouselComponent,
-        PrinDerechoComponent,
-        FooterComponent
     ]
 })
 export class AppModule { }
