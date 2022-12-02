@@ -5,33 +5,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { ComprobanteRegistroComponent } from './comprobante-registro/comprobante-registro.component';
-<<<<<<< Updated upstream
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { MenuComponent } from './menu/menu.component';
-=======
-import { FormsModule } from '@angular/forms';
->>>>>>> Stashed changes
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrinIzquierdoComponent } from "./prin-izquierdo/prin-izquierdo.component";
+import { CarouselComponent } from "./carousel/carousel.component";
+import { PrinDerechoComponent } from "./prin-derecho/prin-derecho.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormularioRegistroComponent,
-    ComprobanteRegistroComponent,
-<<<<<<< Updated upstream
-    PaginaprincipalComponent,
-    MenuComponent
-=======
-
->>>>>>> Stashed changes
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        FormularioRegistroComponent,
+        ComprobanteRegistroComponent,
+        PaginaprincipalComponent,
+        MenuComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        PrinIzquierdoComponent,
+        CarouselComponent,
+        PrinDerechoComponent,
+        FooterComponent
+    ]
 })
 export class AppModule { }
