@@ -1,1 +1,52 @@
-<p>formulario-registro works!</p>
+<div class="form-modul">
+
+       <div class="modal_body">
+
+        <h1>REGISTRO <button class="boton" (click)="closeModal()">x</button></h1> 
+        
+       <ul>
+        <li class="modal_1" >
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+              Toggle width collapse
+            </button>
+          </p>
+          <div style="min-height: 120px;">
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+              <div class="card card-body" style="width: 300px;">
+                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+              </div>
+            </div>
+          </div>
+        </li>
+        
+       <li class="modal_1" >
+            {{message_enlace}} 
+        
+            <label *ngIf="viewModal">
+                <p>{{message}}</p>
+            </label>
+       </li>
+    
+       <li class="modal_1" >
+        {{message_enlace}} 
+    
+             <label *ngIf="viewModal">
+            <p>{{message}}</p>
+            </label>
+        </li>
+        
+        <li class="modal_1">
+            {{message_enlace}} 
+        
+        <label *ngIf="viewModal">
+                <p>{{message}}</p>
+        </label>
+       </li>
+       
+    </ul>
+    </div> 
+
+    
+
+</div>
