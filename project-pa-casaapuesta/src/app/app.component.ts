@@ -7,22 +7,21 @@ import { ServiceService } from './services/service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  
-  modalSwitch: boolean = false;
 
-  
+  //modalSwitch: boolean = false;
+
   //title = 'project-pa-casaapuesta';
 
   constructor(private modalSS: ServiceService){ }
 
     ngOnInit() {
-      this.modalSS.$modal.subscribe((valor)=>this.modalSwitch = valor)
-    }
-    
-    openModal() {
-      this.modalSwitch = true;
+      //this.modalSS.$modal.subscribe((valor)=>this.modalSwitch = valor)
     }
 
-    
- 
+    /*openModal() {
+      this.modalSwitch = true;
+    }*/
+
+
+
 }
