@@ -7,7 +7,7 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { ComprobanteRegistroComponent } from './comprobante-registro/comprobante-registro.component';
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { MenuComponent } from './menu/menu.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,12 +16,14 @@ import {  ReactiveFormsModule } from '@angular/forms';
     FormularioRegistroComponent,
     ComprobanteRegistroComponent,
     PaginaprincipalComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,52 +1,114 @@
-<div class="form-modul">
+<form [formGroup]="form" (ngSubmit)="save($event)">
+  <p>
+      Nombre completo: <br>
+      <input type="text" name="nameCtrl" id="nameCtrl" formControlName = "nameCtrl">
+  </p>
+  <div *ngIf="nameCtrl?.errors && (nameCtrl?.dirty || nameCtrl?.touched)"
+      class="alert">
 
-       <div class="modal_body">
-
-        <h1>REGISTRO <button class="boton" (click)="closeModal()">x</button></h1>
-
-       <ul>
-        <li class="modal_1" >
-        <p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-              Toggle width collapse
-            </button>
-          </p>
-          <div style="min-height: 120px;">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body" style="width: 300px;">
-                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
-              </div>
-            </div>
-          </div>
-        </li>
-
-       <li class="modal_1" >
-            {{message_enlace}}
-
-            <label *ngIf="viewModal">
-                <p>{{message}}</p>
-            </label>
-       </li>
-
-       <li class="modal_1" >
-        {{message_enlace}}
-
-             <label *ngIf="viewModal">
-            <p>{{message}}</p>
-            </label>
-        </li>
-
-        <li class="modal_1">
-            {{message_enlace}}
-
-        <label *ngIf="viewModal">
-                <p>{{message}}</p>
-        </label>
-       </li>
-
-    </ul>
+    <div *ngIf="nameCtrl?.hasError('required')">
+      El nombre es requerido
     </div>
 
+  </div>
+
+  <p>
+      Número de cédula: <br>
+      <input type="number" name="numCtrl" formControlName = "numCtrl">
+  </p>
+
+  <div *ngIf="numCtrl?.errors && (numCtrl?.dirty || numCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="numCtrl?.hasError('required')">
+      El número de cédula es requerido
+    </div>
+
+  </div>
+
+  <p>
+      Fecha: <br>
+      <input type="date" formControlName = "dateCtrl">
+  </p>
+
+  <div *ngIf="dateCtrl?.errors && (dateCtrl?.dirty || dateCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="dateCtrl?.hasError('required')">
+      Debe selecionar la fecha de nacimiento
+    </div>
+
+  </div>
+
+  <p>
+      Email: <br>
+      <input type="email" formControlName = "emailCtrl">
+  </p>
+
+  <div *ngIf="emailCtrl?.errors && (emailCtrl?.dirty || emailCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="emailCtrl?.hasError('required')">
+      Debe ingresar un correo electronico
+    </div>
+
+  </div>
+
+  <p>
+      Pais de residencia <br>
+      <select formControlName="paisesCtrl">
+          <option value="Ecuador">Ecuador</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Chile">Chile</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Guyana">Guyana</option>
+          <option value="Peru">Peru</option>
+          <option value="Surinam">Surinam</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Venezuela">Venezuela</option>
+
+      </select>
+  </p>
+
+  <div *ngIf="paisesCtrl?.errors && (paisesCtrl?.dirty || paisesCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="paisesCtrl?.hasError('required')">
+      No selecciono ningun país
+    </div>
+
+  </div>
+
+  <p>
+      <input type="radio" name="genderCtrl" formControlName="genderCtrl" value="hombre">Hombre <br>
+      <input type="radio" name="genderCtrl" formControlName="genderCtrl" value="mujer">Mujer <br>
+      <input type="radio" name="genderCtrl" formControlName="genderCtrl" value="otro">Otros <br>
+  </p>
+  <div *ngIf="genderCtrl?.errors && (genderCtrl?.dirty || genderCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="genderCtrl?.hasError('required')">
+      No selecciono ningun genero
+    </div>
+
+  </div>
+
+  <p>
+      <input type="checkbox" value="Terminos" formControlName = "terminosCtrl"> Terminos y condiciones
+  </p>
+
+  <div *ngIf="terminosCtrl?.errors && (terminosCtrl?.dirty || terminosCtrl?.touched)"
+      class="alert">
+
+    <div *ngIf="terminosCtrl?.hasError('required')">
+     No Acepto los terminos y condiciones
+    </div>
+
+  </div>
+
+  <button type="submit">Registrar</button>
 
 
-</div>
+</form>
