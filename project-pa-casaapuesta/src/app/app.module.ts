@@ -7,25 +7,34 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { ComprobanteRegistroComponent } from './comprobante-registro/comprobante-registro.component';
 import { PaginaprincipalComponent } from './paginaprincipal/paginaprincipal.component';
 import { MenuComponent } from './menu/menu.component';
-import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrinIzquierdoComponent } from "./prin-izquierdo/prin-izquierdo.component";
+import { CarouselComponent } from "./carousel/carousel.component";
+import { PrinDerechoComponent } from "./prin-derecho/prin-derecho.component";
+import { FooterComponent } from "./footer/footer.component";
+import { ContenidoComponent } from "./contenido/contenido.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormularioRegistroComponent,
-    ComprobanteRegistroComponent,
-    PaginaprincipalComponent,
-    MenuComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
+    declarations: [
+        AppComponent,
+        FormularioRegistroComponent,
+        ComprobanteRegistroComponent,
+        PaginaprincipalComponent,
+        MenuComponent,
+        PrinIzquierdoComponent,
+        CarouselComponent,
+        PrinDerechoComponent,
+        FooterComponent,
+        ContenidoComponent
 
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+    ]
 })
 export class AppModule { }
